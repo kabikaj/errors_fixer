@@ -44,6 +44,7 @@ try:
     VALUE = CONFIG.get('annotation attribs', 'value')
     START = CONFIG.get('annotation attribs', 'start')
     END = CONFIG.get('annotation attribs', 'end')
+
 except (configparser.NoSectionError, configparser.NoOptionError) as err:
     print('Error in process {__file__}: invalid information. {err}'.format(**globals()), file=sys.stderr)
     sys.exit(1)    
@@ -62,7 +63,7 @@ if __name__ == '__main__':
 
     files = ((f.path, f.name) for f in os.scandir(args.input_dir) if f.is_file())
 
-    infiles = ((fpath, fname) for fpath,fname in files if os.path.splitext(fname)[1] == '.json')
+    infiles = ((fpath, fname) for fpath, fname in files if os.path.splitext(fname)[1] == '.json')
 
 
     for fpath,fname in infiles:

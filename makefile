@@ -39,7 +39,7 @@ clean:
 
 help:
 	@echo "    all"
-	@echo "        Clean resources and convert xmi files into json"
+	@echo "        Clean resources and fix errors in all sources"
 	@echo "    fixerrors_ocred"
 	@echo "        fix errors and adjust offsets for ocred texts"
 	@echo "    fixerrors_altafsir"
